@@ -1,0 +1,3324 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/telegraf/telegraf#readme">telegraf (v3.6.7)</a>
+</h1>
+<h4>ðŸ“¡ Modern Telegram bot framework</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.telegraf">module telegraf</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.telegraf">
+            function <span class="apidocSignatureSpan"></span>telegraf
+            <span class="apidocSignatureSpan">(token, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.Composer">
+            function <span class="apidocSignatureSpan">telegraf.</span>Composer
+            <span class="apidocSignatureSpan">(...handlers)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.Extra">
+            function <span class="apidocSignatureSpan">telegraf.</span>Extra
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.Markup">
+            function <span class="apidocSignatureSpan">telegraf.</span>Markup
+            <span class="apidocSignatureSpan">(value = true)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.Markup.hideKeyboard">
+            function <span class="apidocSignatureSpan">telegraf.</span>Markup.hideKeyboard
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.Markup.prototype.hideKeyboard">
+            function <span class="apidocSignatureSpan">telegraf.</span>Markup.prototype.hideKeyboard
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.Router">
+            function <span class="apidocSignatureSpan">telegraf.</span>Router
+            <span class="apidocSignatureSpan">(routeFn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.Telegram">
+            function <span class="apidocSignatureSpan">telegraf.</span>Telegram
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.Telegram.prototype.removeWebHook">
+            function <span class="apidocSignatureSpan">telegraf.</span>Telegram.prototype.removeWebHook
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.Telegram.prototype.setWebHook">
+            function <span class="apidocSignatureSpan">telegraf.</span>Telegram.prototype.setWebHook
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.TelegramError">
+            function <span class="apidocSignatureSpan">telegraf.</span>TelegramError
+            <span class="apidocSignatureSpan">(payload = {})</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.memorySession">
+            function <span class="apidocSignatureSpan">telegraf.</span>memorySession
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.telegraf.prototype.startWebHook">
+            function <span class="apidocSignatureSpan">telegraf.</span>telegraf.prototype.startWebHook
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.telegraf.prototype.webHookCallback">
+            function <span class="apidocSignatureSpan">telegraf.</span>telegraf.prototype.webHookCallback
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.toString">
+            function <span class="apidocSignatureSpan">telegraf.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">telegraf.</span>Markup.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">telegraf.</span>Telegram.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">telegraf.</span>telegraf.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.telegraf.Composer">module telegraf.Composer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.Composer.Composer">
+            function <span class="apidocSignatureSpan">telegraf.</span>Composer
+            <span class="apidocSignatureSpan">(...handlers)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.telegraf.Extra">module telegraf.Extra</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.Extra.Extra">
+            function <span class="apidocSignatureSpan">telegraf.</span>Extra
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.Extra.Markup">
+            function <span class="apidocSignatureSpan">telegraf.Extra.</span>Markup
+            <span class="apidocSignatureSpan">(value = true)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.telegraf.Markup">module telegraf.Markup</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.Markup.Markup">
+            function <span class="apidocSignatureSpan">telegraf.</span>Markup
+            <span class="apidocSignatureSpan">(value = true)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.Markup.hideKeyboard">
+            function <span class="apidocSignatureSpan">telegraf.Markup.</span>hideKeyboard
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.telegraf.Markup.hideKeyboard">module telegraf.Markup.hideKeyboard</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.Markup.hideKeyboard.hideKeyboard">
+            function <span class="apidocSignatureSpan">telegraf.Markup.</span>hideKeyboard
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.telegraf.Markup.prototype">module telegraf.Markup.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.Markup.prototype.hideKeyboard">
+            function <span class="apidocSignatureSpan">telegraf.Markup.prototype.</span>hideKeyboard
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.telegraf.Markup.prototype.hideKeyboard">module telegraf.Markup.prototype.hideKeyboard</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.Markup.prototype.hideKeyboard.hideKeyboard">
+            function <span class="apidocSignatureSpan">telegraf.Markup.prototype.</span>hideKeyboard
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.telegraf.Router">module telegraf.Router</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.Router.Router">
+            function <span class="apidocSignatureSpan">telegraf.</span>Router
+            <span class="apidocSignatureSpan">(routeFn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.telegraf.Telegram">module telegraf.Telegram</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.Telegram.Telegram">
+            function <span class="apidocSignatureSpan">telegraf.</span>Telegram
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.telegraf.Telegram.prototype">module telegraf.Telegram.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.Telegram.prototype.removeWebHook">
+            function <span class="apidocSignatureSpan">telegraf.Telegram.prototype.</span>removeWebHook
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.Telegram.prototype.setWebHook">
+            function <span class="apidocSignatureSpan">telegraf.Telegram.prototype.</span>setWebHook
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.telegraf.Telegram.prototype.removeWebHook">module telegraf.Telegram.prototype.removeWebHook</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.Telegram.prototype.removeWebHook.removeWebHook">
+            function <span class="apidocSignatureSpan">telegraf.Telegram.prototype.</span>removeWebHook
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.telegraf.Telegram.prototype.setWebHook">module telegraf.Telegram.prototype.setWebHook</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.Telegram.prototype.setWebHook.setWebHook">
+            function <span class="apidocSignatureSpan">telegraf.Telegram.prototype.</span>setWebHook
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.telegraf.TelegramError">module telegraf.TelegramError</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.TelegramError.TelegramError">
+            function <span class="apidocSignatureSpan">telegraf.</span>TelegramError
+            <span class="apidocSignatureSpan">(payload = {})</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.telegraf.memorySession">module telegraf.memorySession</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.memorySession.memorySession">
+            function <span class="apidocSignatureSpan">telegraf.</span>memorySession
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.telegraf.telegraf">module telegraf.telegraf</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.telegraf.telegraf">
+            function <span class="apidocSignatureSpan">telegraf.</span>telegraf
+            <span class="apidocSignatureSpan">(token, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.telegraf.Composer">
+            function <span class="apidocSignatureSpan">telegraf.telegraf.</span>Composer
+            <span class="apidocSignatureSpan">(...handlers)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.telegraf.Extra">
+            function <span class="apidocSignatureSpan">telegraf.telegraf.</span>Extra
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.telegraf.Markup">
+            function <span class="apidocSignatureSpan">telegraf.telegraf.</span>Markup
+            <span class="apidocSignatureSpan">(value = true)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.telegraf.Router">
+            function <span class="apidocSignatureSpan">telegraf.telegraf.</span>Router
+            <span class="apidocSignatureSpan">(routeFn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.telegraf.Telegram">
+            function <span class="apidocSignatureSpan">telegraf.telegraf.</span>Telegram
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.telegraf.TelegramError">
+            function <span class="apidocSignatureSpan">telegraf.telegraf.</span>TelegramError
+            <span class="apidocSignatureSpan">(payload = {})</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.telegraf.memorySession">
+            function <span class="apidocSignatureSpan">telegraf.telegraf.</span>memorySession
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.telegraf.telegraf.prototype">module telegraf.telegraf.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.telegraf.prototype.startWebHook">
+            function <span class="apidocSignatureSpan">telegraf.telegraf.prototype.</span>startWebHook
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.telegraf.prototype.webHookCallback">
+            function <span class="apidocSignatureSpan">telegraf.telegraf.prototype.</span>webHookCallback
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.telegraf.telegraf.prototype.startWebHook">module telegraf.telegraf.prototype.startWebHook</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.telegraf.prototype.startWebHook.startWebHook">
+            function <span class="apidocSignatureSpan">telegraf.telegraf.prototype.</span>startWebHook
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.telegraf.telegraf.prototype.webHookCallback">module telegraf.telegraf.prototype.webHookCallback</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.telegraf.prototype.webHookCallback.webHookCallback">
+            function <span class="apidocSignatureSpan">telegraf.telegraf.prototype.</span>webHookCallback
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.telegraf.toString">module telegraf.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telegraf.toString.toString">
+            function <span class="apidocSignatureSpan">telegraf.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.telegraf" id="apidoc.module.telegraf">module telegraf</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.telegraf" id="apidoc.element.telegraf.telegraf">
+        function <span class="apidocSignatureSpan"></span>telegraf
+        <span class="apidocSignatureSpan">(token, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Telegraf extends Composer {
+  constructor (token, options) {
+    super()
+    this.options = Object.assign({
+      retryAfter: 1,
+      handlerTimeout: 0
+    }, options)
+    this.token = token
+    this.handleError = (err) =&gt; {
+      console.error()
+      console.error((err.stack || err.toString()).replace(/^/gm, '  '))
+      console.error()
+      throw err
+    }
+    this.context = {}
+    this.state = {
+      offset: 0,
+      started: false
+    }
+  }
+
+  get token () {
+    return this.options.token
+  }
+
+  set token (token) {
+    this.options.token = token
+    this.telegram = new Telegram(this.options.token, this.options.telegram)
+  }<span class="apidocCodeCommentSpan">/* eslint brace-style: 0 */
+</span>
+  catch (handler) {
+    this.handleError = handler
+    return this
+  }
+
+  webhookCallback (path = '/') {
+    return generateCallback(path, (update, res) =&gt; this.handleUpdate(update, res), debug)
+  }
+
+  startPolling (timeout = 30, limit = 100, allowedUpdates) {
+    this.state.timeout = timeout
+    this.state.limit = limit
+    this.state.allowedUpdates = allowedUpdates
+      ? Array.isArray(allowedUpdates) ? allowedUpdates : [`${allowedUpdates}`]
+      : null
+    if (!this.state.started) {
+      this.state.started = true
+      this.fetchUpdates()
+    }
+    return this
+  }
+
+  startWebhook (path, tlsOptions, port, host, cb) {
+    const webhookCb = this.webhookCallback(path)
+    const callback = cb &amp;&amp; typeof cb === 'function'
+      ? (req, res) =&gt; webhookCb(req, res, () =&gt; cb(req, res))
+      : webhookCb
+    this.webhookServer = tlsOptions
+      ? require('https').createServer(tlsOptions, callback)
+      : require('http').createServer(callback)
+    this.webhookServer.listen(port, host, () =&gt; {
+      debug('Webhook listening on port: %s', port)
+    })
+    return this
+  }
+
+  stop () {
+    this.state.started = false
+    if (this.webhookServer) {
+      this.webhookServer.close()
+    }
+    return this
+  }
+
+  handleUpdates (updates) {
+    if (!Array.isArray(updates)) {
+      return Promise.reject(new Error('Updates must be an array'))
+    }
+    const processAll = Promise.all(updates.map((update) =&gt; this.handleUpdate(update)))
+    if (this.options.handlerTimeout === 0) {
+      return processAll
+    }
+    return Promise.race([
+      processAll,
+      new Promise((resolve) =&gt; setTimeout(resolve, this.options.handlerTimeout))
+    ])
+  }
+
+  handleUpdate (update, webhookResponse) {
+    debug('âš¡ update', update.update_id)
+    const telegram = webhookResponse
+      ? new Telegram(this.token, this.options.telegram, webhookResponse)
+      : this.telegram
+    const ctx = new Context(update, telegram, this.options)
+    Object.assign(ctx, this.context)
+    return this.middleware()(ctx).catch(this.handleError)
+  }
+
+  fetchUpdates () {
+    const { timeout, limit, offset, started, allowedUpdates } = this.state
+    if (!started) {
+      return
+    }
+    this.telegram.getUpdates(timeout, limit, offset, allowedUpdates)
+      .catch((err) =&gt; {
+        const wait = err.retryAfter || this.options.retryAfter
+        console.error(`Failed to get updates. Waiting: ${wait}s`, err)
+        return new Promise((resolve) =&gt; setTimeout(resolve, wait * 1000, []))
+      })
+      .then((updates) =&gt; this.handleUpdates(updates).then(() =&gt; updates))
+      .catch((err) =&gt; {
+        console.error('Failed to process updates.', err)
+        this.state.offset = 0
+        this.state.started = false
+        return []
+      })
+      .then((updates) =&gt; {
+        if (updates.length &gt; 0) {
+          this.state.offset = updates[updates.length - 1].update_id + 1
+        }
+        this.fetchUpdates()
+      })
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.Composer" id="apidoc.element.telegraf.Composer">
+        function <span class="apidocSignatureSpan">telegraf.</span>Composer
+        <span class="apidocSignatureSpan">(...handlers)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Composer {
+  constructor (...handlers) {
+    this.handler = Composer.compose(handlers)
+  }
+
+  use (...fns) {
+    this.handler = Composer.compose([this.handler, ...fns])
+    return this
+  }
+
+  on (updateTypes, ...fns) {
+    return this.use(Composer.mount(updateTypes, Composer.compose(fns)))
+  }
+
+  hears (triggers, ...fns) {
+    return this.use(Composer.hears(triggers, Composer.compose(fns)))
+  }
+
+  command (commands, ...fns) {
+    return this.use(Composer.command(commands, Composer.compose(fns)))
+  }
+
+  action (triggers, ...fns) {
+    return this.use(Composer.action(triggers, Composer.compose(fns)))
+  }
+
+  gameQuery (...fns) {
+    return this.use(Composer.gameQuery(Composer.compose(fns)))
+  }
+
+  middleware () {
+    return this.handler
+  }
+
+  static reply (...args) {
+    return (ctx) =&gt; ctx.reply(...args)
+  }
+
+  static fork (middleware) {
+    return (ctx, next) =&gt; {
+      setImmediate(unwrap(middleware), ctx)
+      return next()
+    }
+  }
+
+  static passThru () {
+    return (ctx, next) =&gt; next()
+  }
+
+  static lazy (fn) {
+    if (typeof fn !== 'function') {
+      throw new Error('Argument must be a function')
+    }
+    return (ctx, next) =&gt; Promise.resolve(fn(ctx))
+      .then((middleware) =&gt; {
+        const handler = unwrap(middleware)
+        return handler(ctx, next)
+      })
+  }
+
+  static log (logFn = console.log) {
+    return Composer.fork((ctx) =&gt; logFn(JSON.stringify(ctx.update, null, 2)))
+  }
+
+  static branch (test, trueMiddleware, falseMiddleware) {
+    if (typeof test !== 'function') {
+      return test ? trueMiddleware : falseMiddleware
+    }
+    return Composer.lazy((ctx) =&gt; Promise.resolve(test(ctx)).then((value) =&gt; value ? trueMiddleware : falseMiddleware))
+  }
+
+  static optional (test, ...fns) {
+    return Composer.branch(test, Composer.compose(fns), Composer.passThru())
+  }
+
+  static dispatch (test, handlers) {
+    if (typeof test !== 'function') {
+      return handlers[test] || Composer.passThru()
+    }
+    return Composer.lazy((ctx) =&gt; Promise.resolve(test(ctx)).then((value) =&gt; handlers[value]))
+  }
+
+  static mount (updateType, middleware) {
+    let test = Array.isArray(updateType)
+      ? (ctx) =&gt; updateType.includes(ctx.updateType) || updateType.includes(ctx.updateSubType)
+      : (ctx) =&gt; updateType === ctx.updateType || updateType === ctx.updateSubType
+    return Composer.optional(test, middleware)
+  }
+
+  static hears (triggers, middleware) {
+    const tests = makeTests(triggers)
+    return Composer.mount('text', Composer.match(tests, middleware))
+  }
+
+  static action (triggers, middleware) {
+    const tests = makeTests(triggers)
+    return Composer.mount('callback_query', Composer.match(tests, middleware))
+  }
+
+  static match (tests, middleware) {
+    return Composer.lazy((ctx) =&gt; {
+      const text = (ctx.message &amp;&amp; (ctx.message.caption || ctx.message.text)) || (ctx.callbackQuery &amp;&amp; ctx.callbackQuery.data)
+      for (let test of tests) {
+        const result = test(text, ctx)
+        if (!result) {
+          continue
+        }
+        ctx.match = result
+        return middleware
+      }
+      return Composer.passThru()
+    })
+  }
+
+  static acl (userId, middleware) {
+    let whitelistFn = userId
+    if (typeof whitelistFn !== 'function') {
+      const allowed = Array.isArray(userId) ? userId : [userId]
+      whitelistFn = (ctx) =&gt; allowed.includes(ctx.from.id) || (ctx.from.username &amp;&amp; allowed.includes(ctx.from.username))
+    }
+    return Composer.optional(whitelistFn, middleware)
+  }
+
+  static gameQuery (middleware) {
+    return Composer.mount('callback_query', Composer.optional((ctx) =&gt; ctx.callbackQuery.game_short_name, middleware))
+  }
+
+  static command (command, middleware) {
+    let commands = Array.isArray(command) ? command : [command]
+    commands = commands.map((cmd) =&gt; cmd.startsWith('/') ? cmd : `/${cmd}`)
+    return Composer.mount('text', Composer.lazy((ctx) =&gt; {
+      const text = ctx.message.text
+      const groupCommands = ctx.me &amp;&amp; (ctx.chat.type === 'group' || ctx.chat.type === 'supergroup')
+        ? commands.map((command) =&gt; `${command}@${ctx.me}`)
+        : []
+      const hasM ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.Extra" id="apidoc.element.telegraf.Extra">
+        function <span class="apidocSignatureSpan">telegraf.</span>Extra
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Extra {
+  constructor (opts) {
+    this.load(opts)
+  }
+
+  load (opts) {
+    if (opts) {
+      Object.assign(this, opts)
+    }
+    return this
+  }
+
+  inReplyTo (messageId) {
+    this.reply_to_message_id = messageId
+    return this
+  }
+
+  notifications (value = true) {
+    this.disable_notification = !value
+    return this
+  }
+
+  webPreview (value = true) {
+    this.disable_web_page_preview = !value
+    return this
+  }
+
+  markup (markup) {
+    if (typeof markup === 'function') {
+      markup = markup(new ReplyMarkup())
+    }
+    this.reply_markup = Object.assign({}, markup)
+    return this
+  }
+
+  HTML (value = true) {
+    this.parse_mode = value ? 'HTML' : undefined
+    return this
+  }
+
+  markdown (value = true) {
+    this.parse_mode = value ? 'Markdown' : undefined
+    return this
+  }
+
+  static inReplyTo (messageId) {
+    return new Extra().inReplyTo(messageId)
+  }
+
+  static notifications (value) {
+    return new Extra().notifications(value)
+  }
+
+  static webPreview (value) {
+    return new Extra().webPreview(value)
+  }
+
+  static load (opts) {
+    return new Extra(opts)
+  }
+
+  static markup (markup) {
+    return new Extra().markup(markup)
+  }
+
+  static HTML (value) {
+    return new Extra().HTML(value)
+  }
+
+  static markdown (value) {
+    return new Extra().markdown(value)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.Markup" id="apidoc.element.telegraf.Markup">
+        function <span class="apidocSignatureSpan">telegraf.</span>Markup
+        <span class="apidocSignatureSpan">(value = true)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Markup {
+  forceReply (value = true) {
+    this.force_reply = value
+    return this
+  }
+
+  removeKeyboard (value = true) {
+    this.remove_keyboard = value
+    return this
+  }
+
+  selective (value = true) {
+    this.selective = value
+    return this
+  }
+
+  extra () {
+    return { reply_markup: Object.assign({}, this) }
+  }
+
+  keyboard (buttons, options) {
+    const keyboard = buildKeyboard(buttons, Object.assign({columns: 1}, options))
+    if (keyboard &amp;&amp; keyboard.length &gt; 0) {
+      this.keyboard = keyboard
+    }
+    return this
+  }
+
+  resize (value = true) {
+    this.resize_keyboard = value
+    return this
+  }
+
+  oneTime (value = true) {
+    this.one_time_keyboard = value
+    return this
+  }
+
+  inlineKeyboard (buttons, options) {
+    const keyboard = buildKeyboard(buttons, Object.assign({columns: buttons.length}, options))
+    if (keyboard &amp;&amp; keyboard.length &gt; 0) {
+      this.inline_keyboard = keyboard
+    }
+    return this
+  }
+
+  button (text, hide) {
+    return Markup.button(text, hide)
+  }
+
+  contactRequestButton (text, hide) {
+    return Markup.contactRequestButton(text, hide)
+  }
+
+  locationRequestButton (text, hide) {
+    return Markup.locationRequestButton(text, hide)
+  }
+
+  urlButton (text, url, hide) {
+    return Markup.urlButton(text, url, hide)
+  }
+
+  callbackButton (text, data, hide) {
+    return Markup.callbackButton(text, data, hide)
+  }
+
+  gameButton (text, hide) {
+    return Markup.gameButton(text, hide)
+  }
+
+  static removeKeyboard (value) {
+    return new Markup().removeKeyboard(value)
+  }
+
+  static forceReply (value) {
+    return new Markup().forceReply(value)
+  }
+
+  static keyboard (buttons, options) {
+    return new Markup().keyboard(buttons, options)
+  }
+
+  static inlineKeyboard (buttons, options) {
+    return new Markup().inlineKeyboard(buttons, options)
+  }
+
+  static resize (value = true) {
+    return new Markup().resize(value)
+  }
+
+  static oneTime (value = true) {
+    return new Markup().oneTime(value)
+  }
+
+  static button (text, hide) {
+    return { text: text, hide: hide }
+  }
+
+  static contactRequestButton (text, hide = false) {
+    return { text: text, request_contact: true, hide: hide }
+  }
+
+  static locationRequestButton (text, hide = false) {
+    return { text: text, request_location: true, hide: hide }
+  }
+
+  static urlButton (text, url, hide = false) {
+    return { text: text, url: url, hide: hide }
+  }
+
+  static callbackButton (text, data, hide = false) {
+    return { text: text, callback_data: data, hide: hide }
+  }
+
+  static switchToChatButton (text, value, hide = false) {
+    return { text: text, switch_inline_query: value, hide: hide }
+  }
+
+  static switchToCurrentChatButton (text, value, hide = false) {
+    return { text: text, switch_inline_query_current_chat: value, hide: hide }
+  }
+
+  static gameButton (text, hide = false) {
+    return { text: text, callback_game: {}, hide: hide }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.Markup.hideKeyboard" id="apidoc.element.telegraf.Markup.hideKeyboard">
+        function <span class="apidocSignatureSpan">telegraf.</span>Markup.hideKeyboard
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deprecated() {
+  warned = exports.printDeprecationMessage(msg, warned, deprecated);
+  if (new.target) {
+    return Reflect.construct(fn, arguments, new.target);
+  }
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.Markup.prototype.hideKeyboard" id="apidoc.element.telegraf.Markup.prototype.hideKeyboard">
+        function <span class="apidocSignatureSpan">telegraf.</span>Markup.prototype.hideKeyboard
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deprecated() {
+  warned = exports.printDeprecationMessage(msg, warned, deprecated);
+  if (new.target) {
+    return Reflect.construct(fn, arguments, new.target);
+  }
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.Router" id="apidoc.element.telegraf.Router">
+        function <span class="apidocSignatureSpan">telegraf.</span>Router
+        <span class="apidocSignatureSpan">(routeFn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Router {
+  constructor (routeFn) {
+    if (!routeFn) {
+      throw new Error('Missing routing function')
+    }
+    this.routeFn = routeFn
+    this.handlers = new Map()
+    this.otherwiseHandler = passThru()
+  }
+
+  on (route, ...fns) {
+    if (fns.length === 0) {
+      throw new TypeError('At least one handler must be provided')
+    }
+    this.handlers.set(route, compose(fns))
+    return this
+  }
+
+  otherwise (...fns) {
+    if (fns.length === 0) {
+      throw new TypeError('At least one otherwise handler must be provided')
+    }
+    this.otherwiseHandler = compose(fns)
+    return this
+  }
+
+  middleware () {
+    return lazy((ctx) =&gt; {
+      return this.routeFn(ctx).then((result) =&gt; {
+        if (!result || !result.route || !this.handlers.has(result.route)) {
+          return this.otherwiseHandler
+        }
+        Object.assign(ctx, result.context)
+        Object.assign(ctx.state, result.state)
+        return this.handlers.get(result.route)
+      })
+    })
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.Telegram" id="apidoc.element.telegraf.Telegram">
+        function <span class="apidocSignatureSpan">telegraf.</span>Telegram
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Telegram extends ApiClient {
+  getMe () {
+    return this.callApi('getMe')
+  }
+
+  getFile (fileId) {
+    return this.callApi('getFile', {file_id: fileId})
+  }
+
+  getFileLink (fileId) {
+    return Promise.resolve(fileId)
+      .then((fileId) =&gt; {
+        if (fileId &amp;&amp; fileId.file_path) {
+          return fileId
+        }
+        const id = fileId &amp;&amp; fileId.file_id ? fileId.file_id : fileId
+        return this.getFile(id)
+      })
+      .then((file) =&gt; `${this.options.apiRoot}/file/bot${this.token}/${file.file_path}`)
+  }
+
+  getUpdates (timeout, limit, offset, allowedUpdates) {
+    let url = `getUpdates?offset=${offset}&amp;limit=${limit}&amp;timeout=${timeout}`
+    return this.callApi(url, {
+      allowed_updates: allowedUpdates
+    })
+  }
+
+  getWebhookInfo () {
+    return this.callApi(`getWebhookInfo`)
+  }
+
+  getGameHighScores (userId, inlineMessageId, chatId, messageId) {
+    return this.callApi(`getGameHighScores`, {
+      user_id: userId,
+      inline_message_id: inlineMessageId,
+      chat_id: chatId,
+      message_id: messageId
+    })
+  }
+
+  setGameScore (userId, score, inlineMessageId, chatId, messageId, editMessage = true, force) {
+    return this.callApi(`setGameScore`, {
+      user_id: userId,
+      score: score,
+      inline_message_id: inlineMessageId,
+      chat_id: chatId,
+      message_id: messageId,
+      disable_edit_message: !editMessage,
+      force: force
+    })
+  }
+
+  setWebhook (url, cert, maxConnections, allowedUpdates) {
+    return this.callApi('setWebhook', {
+      url: url,
+      certificate: cert,
+      max_connections: maxConnections,
+      allowed_updates: allowedUpdates
+    })
+  }
+
+  deleteWebhook () {
+    return this.callApi('deleteWebhook')
+  }
+
+  sendMessage (chatId, text, extra) {
+    return this.callApi('sendMessage', Object.assign({ chat_id: chatId, text: text }, extra))
+  }
+
+  forwardMessage (chatId, fromChatId, messageId, extra) {
+    return this.callApi('forwardMessage', Object.assign({
+      chat_id: chatId,
+      from_chat_id: fromChatId,
+      message_id: messageId
+    }, extra))
+  }
+
+  sendChatAction (chatId, action) {
+    return this.callApi('sendChatAction', { chat_id: chatId, action: action })
+  }
+
+  getUserProfilePhotos (userId, offset, limit) {
+    return this.callApi('getUserProfilePhotos', { user_id: userId, offset: offset, limit: limit })
+  }
+
+  sendLocation (chatId, latitude, longitude, extra) {
+    return this.callApi('sendLocation', Object.assign({ chat_id: chatId, latitude: latitude, longitude: longitude }, extra))
+  }
+
+  sendVenue (chatId, latitude, longitude, title, address, extra) {
+    return this.callApi('sendVenue', Object.assign({
+      chat_id: chatId,
+      latitude: latitude,
+      longitude: longitude,
+      title: title,
+      address: address
+    }, extra))
+  }
+
+  sendContact (chatId, phoneNumber, firstName, extra) {
+    return this.callApi('sendContact', Object.assign({ chat_id: chatId, phone_number: phoneNumber, first_name: firstName }, extra
+))
+  }
+
+  sendPhoto (chatId, photo, extra) {
+    return this.callApi('sendPhoto', Object.assign({ chat_id: chatId, photo: photo }, extra))
+  }
+
+  sendDocument (chatId, doc, extra) {
+    return this.callApi('sendDocument', Object.assign({ chat_id: chatId, document: doc }, extra))
+  }
+
+  sendAudio (chatId, audio, extra) {
+    return this.callApi('sendAudio', Object.assign({ chat_id: chatId, audio: audio }, extra))
+  }
+
+  sendSticker (chatId, sticker, extra) {
+    return this.callApi('sendSticker', Object.assign({ chat_id: chatId, sticker: sticker }, extra))
+  }
+
+  sendVideo (chatId, video, extra) {
+    return this.callApi('sendVideo', Object.assign({ chat_id: chatId, video: video }, extra))
+  }
+
+  sendVoice (chatId, voice, extra) {
+    return this.callApi('sendVoice', Object.assign({ chat_id: chatId, voice: voice }, extra))
+  }
+
+  sendGame (chatId, gameName, extra) {
+    return this.callApi('sendGame', Object.assign({ chat_id: chatId, game_short_name: gameName }, extra))
+  }
+
+  getChat (chatId) {
+    return this.callApi('getChat', {chat_id: chatId})
+  }
+
+  getChatAdministrators (chatId) {
+    return this.callApi('getCh ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.Telegram.prototype.removeWebHook" id="apidoc.element.telegraf.Telegram.prototype.removeWebHook">
+        function <span class="apidocSignatureSpan">telegraf.</span>Telegram.prototype.removeWebHook
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deprecated() {
+  warned = exports.printDeprecationMessage(msg, warned, deprecated);
+  if (new.target) {
+    return Reflect.construct(fn, arguments, new.target);
+  }
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.Telegram.prototype.setWebHook" id="apidoc.element.telegraf.Telegram.prototype.setWebHook">
+        function <span class="apidocSignatureSpan">telegraf.</span>Telegram.prototype.setWebHook
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deprecated() {
+  warned = exports.printDeprecationMessage(msg, warned, deprecated);
+  if (new.target) {
+    return Reflect.construct(fn, arguments, new.target);
+  }
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.TelegramError" id="apidoc.element.telegraf.TelegramError">
+        function <span class="apidocSignatureSpan">telegraf.</span>TelegramError
+        <span class="apidocSignatureSpan">(payload = {})</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class TelegramError extends Error {
+  constructor (payload = {}) {
+    super(`${payload.error_code}: ${payload.description}`)
+    this.code = payload.error_code
+    this.description = payload.description
+    this.retryAfter = payload.retry_after
+    this.migrateToChatId = payload.migrate_to_chat_id
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.memorySession" id="apidoc.element.telegraf.memorySession">
+        function <span class="apidocSignatureSpan">telegraf.</span>memorySession
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">memorySession = function (opts) {
+  opts = Object.assign({
+    sessionName: 'session',
+    getSessionKey: (ctx) =&gt; ctx.from &amp;&amp; ctx.chat &amp;&amp; `${ctx.from.id}:${ctx.chat.id}`
+  }, opts)
+
+  const store = new Map()
+  return (ctx, next) =&gt; {
+    const key = opts.getSessionKey(ctx)
+    if (!key) {
+      return next()
+    }
+    let session = store.get(key) || {}
+    Object.defineProperty(ctx, opts.sessionName, {
+      get: function () { return session },
+      set: function (newValue) { session = Object.assign({}, newValue) }
+    })
+    try {
+      return next()
+    } finally {
+      store.set(key, session)
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.telegraf.prototype.startWebHook" id="apidoc.element.telegraf.telegraf.prototype.startWebHook">
+        function <span class="apidocSignatureSpan">telegraf.</span>telegraf.prototype.startWebHook
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deprecated() {
+  warned = exports.printDeprecationMessage(msg, warned, deprecated);
+  if (new.target) {
+    return Reflect.construct(fn, arguments, new.target);
+  }
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.telegraf.prototype.webHookCallback" id="apidoc.element.telegraf.telegraf.prototype.webHookCallback">
+        function <span class="apidocSignatureSpan">telegraf.</span>telegraf.prototype.webHookCallback
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deprecated() {
+  warned = exports.printDeprecationMessage(msg, warned, deprecated);
+  if (new.target) {
+    return Reflect.construct(fn, arguments, new.target);
+  }
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.toString" id="apidoc.element.telegraf.toString">
+        function <span class="apidocSignatureSpan">telegraf.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.telegraf.Composer" id="apidoc.module.telegraf.Composer">module telegraf.Composer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.Composer.Composer" id="apidoc.element.telegraf.Composer.Composer">
+        function <span class="apidocSignatureSpan">telegraf.</span>Composer
+        <span class="apidocSignatureSpan">(...handlers)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Composer {
+  constructor (...handlers) {
+    this.handler = Composer.compose(handlers)
+  }
+
+  use (...fns) {
+    this.handler = Composer.compose([this.handler, ...fns])
+    return this
+  }
+
+  on (updateTypes, ...fns) {
+    return this.use(Composer.mount(updateTypes, Composer.compose(fns)))
+  }
+
+  hears (triggers, ...fns) {
+    return this.use(Composer.hears(triggers, Composer.compose(fns)))
+  }
+
+  command (commands, ...fns) {
+    return this.use(Composer.command(commands, Composer.compose(fns)))
+  }
+
+  action (triggers, ...fns) {
+    return this.use(Composer.action(triggers, Composer.compose(fns)))
+  }
+
+  gameQuery (...fns) {
+    return this.use(Composer.gameQuery(Composer.compose(fns)))
+  }
+
+  middleware () {
+    return this.handler
+  }
+
+  static reply (...args) {
+    return (ctx) =&gt; ctx.reply(...args)
+  }
+
+  static fork (middleware) {
+    return (ctx, next) =&gt; {
+      setImmediate(unwrap(middleware), ctx)
+      return next()
+    }
+  }
+
+  static passThru () {
+    return (ctx, next) =&gt; next()
+  }
+
+  static lazy (fn) {
+    if (typeof fn !== 'function') {
+      throw new Error('Argument must be a function')
+    }
+    return (ctx, next) =&gt; Promise.resolve(fn(ctx))
+      .then((middleware) =&gt; {
+        const handler = unwrap(middleware)
+        return handler(ctx, next)
+      })
+  }
+
+  static log (logFn = console.log) {
+    return Composer.fork((ctx) =&gt; logFn(JSON.stringify(ctx.update, null, 2)))
+  }
+
+  static branch (test, trueMiddleware, falseMiddleware) {
+    if (typeof test !== 'function') {
+      return test ? trueMiddleware : falseMiddleware
+    }
+    return Composer.lazy((ctx) =&gt; Promise.resolve(test(ctx)).then((value) =&gt; value ? trueMiddleware : falseMiddleware))
+  }
+
+  static optional (test, ...fns) {
+    return Composer.branch(test, Composer.compose(fns), Composer.passThru())
+  }
+
+  static dispatch (test, handlers) {
+    if (typeof test !== 'function') {
+      return handlers[test] || Composer.passThru()
+    }
+    return Composer.lazy((ctx) =&gt; Promise.resolve(test(ctx)).then((value) =&gt; handlers[value]))
+  }
+
+  static mount (updateType, middleware) {
+    let test = Array.isArray(updateType)
+      ? (ctx) =&gt; updateType.includes(ctx.updateType) || updateType.includes(ctx.updateSubType)
+      : (ctx) =&gt; updateType === ctx.updateType || updateType === ctx.updateSubType
+    return Composer.optional(test, middleware)
+  }
+
+  static hears (triggers, middleware) {
+    const tests = makeTests(triggers)
+    return Composer.mount('text', Composer.match(tests, middleware))
+  }
+
+  static action (triggers, middleware) {
+    const tests = makeTests(triggers)
+    return Composer.mount('callback_query', Composer.match(tests, middleware))
+  }
+
+  static match (tests, middleware) {
+    return Composer.lazy((ctx) =&gt; {
+      const text = (ctx.message &amp;&amp; (ctx.message.caption || ctx.message.text)) || (ctx.callbackQuery &amp;&amp; ctx.callbackQuery.data)
+      for (let test of tests) {
+        const result = test(text, ctx)
+        if (!result) {
+          continue
+        }
+        ctx.match = result
+        return middleware
+      }
+      return Composer.passThru()
+    })
+  }
+
+  static acl (userId, middleware) {
+    let whitelistFn = userId
+    if (typeof whitelistFn !== 'function') {
+      const allowed = Array.isArray(userId) ? userId : [userId]
+      whitelistFn = (ctx) =&gt; allowed.includes(ctx.from.id) || (ctx.from.username &amp;&amp; allowed.includes(ctx.from.username))
+    }
+    return Composer.optional(whitelistFn, middleware)
+  }
+
+  static gameQuery (middleware) {
+    return Composer.mount('callback_query', Composer.optional((ctx) =&gt; ctx.callbackQuery.game_short_name, middleware))
+  }
+
+  static command (command, middleware) {
+    let commands = Array.isArray(command) ? command : [command]
+    commands = commands.map((cmd) =&gt; cmd.startsWith('/') ? cmd : `/${cmd}`)
+    return Composer.mount('text', Composer.lazy((ctx) =&gt; {
+      const text = ctx.message.text
+      const groupCommands = ctx.me &amp;&amp; (ctx.chat.type === 'group' || ctx.chat.type === 'supergroup')
+        ? commands.map((command) =&gt; `${command}@${ctx.me}`)
+        : []
+      const hasM ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.telegraf.Extra" id="apidoc.module.telegraf.Extra">module telegraf.Extra</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.Extra.Extra" id="apidoc.element.telegraf.Extra.Extra">
+        function <span class="apidocSignatureSpan">telegraf.</span>Extra
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Extra {
+  constructor (opts) {
+    this.load(opts)
+  }
+
+  load (opts) {
+    if (opts) {
+      Object.assign(this, opts)
+    }
+    return this
+  }
+
+  inReplyTo (messageId) {
+    this.reply_to_message_id = messageId
+    return this
+  }
+
+  notifications (value = true) {
+    this.disable_notification = !value
+    return this
+  }
+
+  webPreview (value = true) {
+    this.disable_web_page_preview = !value
+    return this
+  }
+
+  markup (markup) {
+    if (typeof markup === 'function') {
+      markup = markup(new ReplyMarkup())
+    }
+    this.reply_markup = Object.assign({}, markup)
+    return this
+  }
+
+  HTML (value = true) {
+    this.parse_mode = value ? 'HTML' : undefined
+    return this
+  }
+
+  markdown (value = true) {
+    this.parse_mode = value ? 'Markdown' : undefined
+    return this
+  }
+
+  static inReplyTo (messageId) {
+    return new Extra().inReplyTo(messageId)
+  }
+
+  static notifications (value) {
+    return new Extra().notifications(value)
+  }
+
+  static webPreview (value) {
+    return new Extra().webPreview(value)
+  }
+
+  static load (opts) {
+    return new Extra(opts)
+  }
+
+  static markup (markup) {
+    return new Extra().markup(markup)
+  }
+
+  static HTML (value) {
+    return new Extra().HTML(value)
+  }
+
+  static markdown (value) {
+    return new Extra().markdown(value)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.Extra.Markup" id="apidoc.element.telegraf.Extra.Markup">
+        function <span class="apidocSignatureSpan">telegraf.Extra.</span>Markup
+        <span class="apidocSignatureSpan">(value = true)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Markup {
+  forceReply (value = true) {
+    this.force_reply = value
+    return this
+  }
+
+  removeKeyboard (value = true) {
+    this.remove_keyboard = value
+    return this
+  }
+
+  selective (value = true) {
+    this.selective = value
+    return this
+  }
+
+  extra () {
+    return { reply_markup: Object.assign({}, this) }
+  }
+
+  keyboard (buttons, options) {
+    const keyboard = buildKeyboard(buttons, Object.assign({columns: 1}, options))
+    if (keyboard &amp;&amp; keyboard.length &gt; 0) {
+      this.keyboard = keyboard
+    }
+    return this
+  }
+
+  resize (value = true) {
+    this.resize_keyboard = value
+    return this
+  }
+
+  oneTime (value = true) {
+    this.one_time_keyboard = value
+    return this
+  }
+
+  inlineKeyboard (buttons, options) {
+    const keyboard = buildKeyboard(buttons, Object.assign({columns: buttons.length}, options))
+    if (keyboard &amp;&amp; keyboard.length &gt; 0) {
+      this.inline_keyboard = keyboard
+    }
+    return this
+  }
+
+  button (text, hide) {
+    return Markup.button(text, hide)
+  }
+
+  contactRequestButton (text, hide) {
+    return Markup.contactRequestButton(text, hide)
+  }
+
+  locationRequestButton (text, hide) {
+    return Markup.locationRequestButton(text, hide)
+  }
+
+  urlButton (text, url, hide) {
+    return Markup.urlButton(text, url, hide)
+  }
+
+  callbackButton (text, data, hide) {
+    return Markup.callbackButton(text, data, hide)
+  }
+
+  gameButton (text, hide) {
+    return Markup.gameButton(text, hide)
+  }
+
+  static removeKeyboard (value) {
+    return new Markup().removeKeyboard(value)
+  }
+
+  static forceReply (value) {
+    return new Markup().forceReply(value)
+  }
+
+  static keyboard (buttons, options) {
+    return new Markup().keyboard(buttons, options)
+  }
+
+  static inlineKeyboard (buttons, options) {
+    return new Markup().inlineKeyboard(buttons, options)
+  }
+
+  static resize (value = true) {
+    return new Markup().resize(value)
+  }
+
+  static oneTime (value = true) {
+    return new Markup().oneTime(value)
+  }
+
+  static button (text, hide) {
+    return { text: text, hide: hide }
+  }
+
+  static contactRequestButton (text, hide = false) {
+    return { text: text, request_contact: true, hide: hide }
+  }
+
+  static locationRequestButton (text, hide = false) {
+    return { text: text, request_location: true, hide: hide }
+  }
+
+  static urlButton (text, url, hide = false) {
+    return { text: text, url: url, hide: hide }
+  }
+
+  static callbackButton (text, data, hide = false) {
+    return { text: text, callback_data: data, hide: hide }
+  }
+
+  static switchToChatButton (text, value, hide = false) {
+    return { text: text, switch_inline_query: value, hide: hide }
+  }
+
+  static switchToCurrentChatButton (text, value, hide = false) {
+    return { text: text, switch_inline_query_current_chat: value, hide: hide }
+  }
+
+  static gameButton (text, hide = false) {
+    return { text: text, callback_game: {}, hide: hide }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.telegraf.Markup" id="apidoc.module.telegraf.Markup">module telegraf.Markup</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.Markup.Markup" id="apidoc.element.telegraf.Markup.Markup">
+        function <span class="apidocSignatureSpan">telegraf.</span>Markup
+        <span class="apidocSignatureSpan">(value = true)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Markup {
+  forceReply (value = true) {
+    this.force_reply = value
+    return this
+  }
+
+  removeKeyboard (value = true) {
+    this.remove_keyboard = value
+    return this
+  }
+
+  selective (value = true) {
+    this.selective = value
+    return this
+  }
+
+  extra () {
+    return { reply_markup: Object.assign({}, this) }
+  }
+
+  keyboard (buttons, options) {
+    const keyboard = buildKeyboard(buttons, Object.assign({columns: 1}, options))
+    if (keyboard &amp;&amp; keyboard.length &gt; 0) {
+      this.keyboard = keyboard
+    }
+    return this
+  }
+
+  resize (value = true) {
+    this.resize_keyboard = value
+    return this
+  }
+
+  oneTime (value = true) {
+    this.one_time_keyboard = value
+    return this
+  }
+
+  inlineKeyboard (buttons, options) {
+    const keyboard = buildKeyboard(buttons, Object.assign({columns: buttons.length}, options))
+    if (keyboard &amp;&amp; keyboard.length &gt; 0) {
+      this.inline_keyboard = keyboard
+    }
+    return this
+  }
+
+  button (text, hide) {
+    return Markup.button(text, hide)
+  }
+
+  contactRequestButton (text, hide) {
+    return Markup.contactRequestButton(text, hide)
+  }
+
+  locationRequestButton (text, hide) {
+    return Markup.locationRequestButton(text, hide)
+  }
+
+  urlButton (text, url, hide) {
+    return Markup.urlButton(text, url, hide)
+  }
+
+  callbackButton (text, data, hide) {
+    return Markup.callbackButton(text, data, hide)
+  }
+
+  gameButton (text, hide) {
+    return Markup.gameButton(text, hide)
+  }
+
+  static removeKeyboard (value) {
+    return new Markup().removeKeyboard(value)
+  }
+
+  static forceReply (value) {
+    return new Markup().forceReply(value)
+  }
+
+  static keyboard (buttons, options) {
+    return new Markup().keyboard(buttons, options)
+  }
+
+  static inlineKeyboard (buttons, options) {
+    return new Markup().inlineKeyboard(buttons, options)
+  }
+
+  static resize (value = true) {
+    return new Markup().resize(value)
+  }
+
+  static oneTime (value = true) {
+    return new Markup().oneTime(value)
+  }
+
+  static button (text, hide) {
+    return { text: text, hide: hide }
+  }
+
+  static contactRequestButton (text, hide = false) {
+    return { text: text, request_contact: true, hide: hide }
+  }
+
+  static locationRequestButton (text, hide = false) {
+    return { text: text, request_location: true, hide: hide }
+  }
+
+  static urlButton (text, url, hide = false) {
+    return { text: text, url: url, hide: hide }
+  }
+
+  static callbackButton (text, data, hide = false) {
+    return { text: text, callback_data: data, hide: hide }
+  }
+
+  static switchToChatButton (text, value, hide = false) {
+    return { text: text, switch_inline_query: value, hide: hide }
+  }
+
+  static switchToCurrentChatButton (text, value, hide = false) {
+    return { text: text, switch_inline_query_current_chat: value, hide: hide }
+  }
+
+  static gameButton (text, hide = false) {
+    return { text: text, callback_game: {}, hide: hide }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.Markup.hideKeyboard" id="apidoc.element.telegraf.Markup.hideKeyboard">
+        function <span class="apidocSignatureSpan">telegraf.Markup.</span>hideKeyboard
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deprecated() {
+  warned = exports.printDeprecationMessage(msg, warned, deprecated);
+  if (new.target) {
+    return Reflect.construct(fn, arguments, new.target);
+  }
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.telegraf.Markup.hideKeyboard" id="apidoc.module.telegraf.Markup.hideKeyboard">module telegraf.Markup.hideKeyboard</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.Markup.hideKeyboard.hideKeyboard" id="apidoc.element.telegraf.Markup.hideKeyboard.hideKeyboard">
+        function <span class="apidocSignatureSpan">telegraf.Markup.</span>hideKeyboard
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deprecated() {
+  warned = exports.printDeprecationMessage(msg, warned, deprecated);
+  if (new.target) {
+    return Reflect.construct(fn, arguments, new.target);
+  }
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.telegraf.Markup.prototype" id="apidoc.module.telegraf.Markup.prototype">module telegraf.Markup.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.Markup.prototype.hideKeyboard" id="apidoc.element.telegraf.Markup.prototype.hideKeyboard">
+        function <span class="apidocSignatureSpan">telegraf.Markup.prototype.</span>hideKeyboard
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deprecated() {
+  warned = exports.printDeprecationMessage(msg, warned, deprecated);
+  if (new.target) {
+    return Reflect.construct(fn, arguments, new.target);
+  }
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.telegraf.Markup.prototype.hideKeyboard" id="apidoc.module.telegraf.Markup.prototype.hideKeyboard">module telegraf.Markup.prototype.hideKeyboard</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.Markup.prototype.hideKeyboard.hideKeyboard" id="apidoc.element.telegraf.Markup.prototype.hideKeyboard.hideKeyboard">
+        function <span class="apidocSignatureSpan">telegraf.Markup.prototype.</span>hideKeyboard
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deprecated() {
+  warned = exports.printDeprecationMessage(msg, warned, deprecated);
+  if (new.target) {
+    return Reflect.construct(fn, arguments, new.target);
+  }
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.telegraf.Router" id="apidoc.module.telegraf.Router">module telegraf.Router</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.Router.Router" id="apidoc.element.telegraf.Router.Router">
+        function <span class="apidocSignatureSpan">telegraf.</span>Router
+        <span class="apidocSignatureSpan">(routeFn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Router {
+  constructor (routeFn) {
+    if (!routeFn) {
+      throw new Error('Missing routing function')
+    }
+    this.routeFn = routeFn
+    this.handlers = new Map()
+    this.otherwiseHandler = passThru()
+  }
+
+  on (route, ...fns) {
+    if (fns.length === 0) {
+      throw new TypeError('At least one handler must be provided')
+    }
+    this.handlers.set(route, compose(fns))
+    return this
+  }
+
+  otherwise (...fns) {
+    if (fns.length === 0) {
+      throw new TypeError('At least one otherwise handler must be provided')
+    }
+    this.otherwiseHandler = compose(fns)
+    return this
+  }
+
+  middleware () {
+    return lazy((ctx) =&gt; {
+      return this.routeFn(ctx).then((result) =&gt; {
+        if (!result || !result.route || !this.handlers.has(result.route)) {
+          return this.otherwiseHandler
+        }
+        Object.assign(ctx, result.context)
+        Object.assign(ctx.state, result.state)
+        return this.handlers.get(result.route)
+      })
+    })
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.telegraf.Telegram" id="apidoc.module.telegraf.Telegram">module telegraf.Telegram</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.Telegram.Telegram" id="apidoc.element.telegraf.Telegram.Telegram">
+        function <span class="apidocSignatureSpan">telegraf.</span>Telegram
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Telegram extends ApiClient {
+  getMe () {
+    return this.callApi('getMe')
+  }
+
+  getFile (fileId) {
+    return this.callApi('getFile', {file_id: fileId})
+  }
+
+  getFileLink (fileId) {
+    return Promise.resolve(fileId)
+      .then((fileId) =&gt; {
+        if (fileId &amp;&amp; fileId.file_path) {
+          return fileId
+        }
+        const id = fileId &amp;&amp; fileId.file_id ? fileId.file_id : fileId
+        return this.getFile(id)
+      })
+      .then((file) =&gt; `${this.options.apiRoot}/file/bot${this.token}/${file.file_path}`)
+  }
+
+  getUpdates (timeout, limit, offset, allowedUpdates) {
+    let url = `getUpdates?offset=${offset}&amp;limit=${limit}&amp;timeout=${timeout}`
+    return this.callApi(url, {
+      allowed_updates: allowedUpdates
+    })
+  }
+
+  getWebhookInfo () {
+    return this.callApi(`getWebhookInfo`)
+  }
+
+  getGameHighScores (userId, inlineMessageId, chatId, messageId) {
+    return this.callApi(`getGameHighScores`, {
+      user_id: userId,
+      inline_message_id: inlineMessageId,
+      chat_id: chatId,
+      message_id: messageId
+    })
+  }
+
+  setGameScore (userId, score, inlineMessageId, chatId, messageId, editMessage = true, force) {
+    return this.callApi(`setGameScore`, {
+      user_id: userId,
+      score: score,
+      inline_message_id: inlineMessageId,
+      chat_id: chatId,
+      message_id: messageId,
+      disable_edit_message: !editMessage,
+      force: force
+    })
+  }
+
+  setWebhook (url, cert, maxConnections, allowedUpdates) {
+    return this.callApi('setWebhook', {
+      url: url,
+      certificate: cert,
+      max_connections: maxConnections,
+      allowed_updates: allowedUpdates
+    })
+  }
+
+  deleteWebhook () {
+    return this.callApi('deleteWebhook')
+  }
+
+  sendMessage (chatId, text, extra) {
+    return this.callApi('sendMessage', Object.assign({ chat_id: chatId, text: text }, extra))
+  }
+
+  forwardMessage (chatId, fromChatId, messageId, extra) {
+    return this.callApi('forwardMessage', Object.assign({
+      chat_id: chatId,
+      from_chat_id: fromChatId,
+      message_id: messageId
+    }, extra))
+  }
+
+  sendChatAction (chatId, action) {
+    return this.callApi('sendChatAction', { chat_id: chatId, action: action })
+  }
+
+  getUserProfilePhotos (userId, offset, limit) {
+    return this.callApi('getUserProfilePhotos', { user_id: userId, offset: offset, limit: limit })
+  }
+
+  sendLocation (chatId, latitude, longitude, extra) {
+    return this.callApi('sendLocation', Object.assign({ chat_id: chatId, latitude: latitude, longitude: longitude }, extra))
+  }
+
+  sendVenue (chatId, latitude, longitude, title, address, extra) {
+    return this.callApi('sendVenue', Object.assign({
+      chat_id: chatId,
+      latitude: latitude,
+      longitude: longitude,
+      title: title,
+      address: address
+    }, extra))
+  }
+
+  sendContact (chatId, phoneNumber, firstName, extra) {
+    return this.callApi('sendContact', Object.assign({ chat_id: chatId, phone_number: phoneNumber, first_name: firstName }, extra
+))
+  }
+
+  sendPhoto (chatId, photo, extra) {
+    return this.callApi('sendPhoto', Object.assign({ chat_id: chatId, photo: photo }, extra))
+  }
+
+  sendDocument (chatId, doc, extra) {
+    return this.callApi('sendDocument', Object.assign({ chat_id: chatId, document: doc }, extra))
+  }
+
+  sendAudio (chatId, audio, extra) {
+    return this.callApi('sendAudio', Object.assign({ chat_id: chatId, audio: audio }, extra))
+  }
+
+  sendSticker (chatId, sticker, extra) {
+    return this.callApi('sendSticker', Object.assign({ chat_id: chatId, sticker: sticker }, extra))
+  }
+
+  sendVideo (chatId, video, extra) {
+    return this.callApi('sendVideo', Object.assign({ chat_id: chatId, video: video }, extra))
+  }
+
+  sendVoice (chatId, voice, extra) {
+    return this.callApi('sendVoice', Object.assign({ chat_id: chatId, voice: voice }, extra))
+  }
+
+  sendGame (chatId, gameName, extra) {
+    return this.callApi('sendGame', Object.assign({ chat_id: chatId, game_short_name: gameName }, extra))
+  }
+
+  getChat (chatId) {
+    return this.callApi('getChat', {chat_id: chatId})
+  }
+
+  getChatAdministrators (chatId) {
+    return this.callApi('getCh ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.telegraf.Telegram.prototype" id="apidoc.module.telegraf.Telegram.prototype">module telegraf.Telegram.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.Telegram.prototype.removeWebHook" id="apidoc.element.telegraf.Telegram.prototype.removeWebHook">
+        function <span class="apidocSignatureSpan">telegraf.Telegram.prototype.</span>removeWebHook
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deprecated() {
+  warned = exports.printDeprecationMessage(msg, warned, deprecated);
+  if (new.target) {
+    return Reflect.construct(fn, arguments, new.target);
+  }
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.Telegram.prototype.setWebHook" id="apidoc.element.telegraf.Telegram.prototype.setWebHook">
+        function <span class="apidocSignatureSpan">telegraf.Telegram.prototype.</span>setWebHook
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deprecated() {
+  warned = exports.printDeprecationMessage(msg, warned, deprecated);
+  if (new.target) {
+    return Reflect.construct(fn, arguments, new.target);
+  }
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.telegraf.Telegram.prototype.removeWebHook" id="apidoc.module.telegraf.Telegram.prototype.removeWebHook">module telegraf.Telegram.prototype.removeWebHook</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.Telegram.prototype.removeWebHook.removeWebHook" id="apidoc.element.telegraf.Telegram.prototype.removeWebHook.removeWebHook">
+        function <span class="apidocSignatureSpan">telegraf.Telegram.prototype.</span>removeWebHook
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deprecated() {
+  warned = exports.printDeprecationMessage(msg, warned, deprecated);
+  if (new.target) {
+    return Reflect.construct(fn, arguments, new.target);
+  }
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.telegraf.Telegram.prototype.setWebHook" id="apidoc.module.telegraf.Telegram.prototype.setWebHook">module telegraf.Telegram.prototype.setWebHook</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.Telegram.prototype.setWebHook.setWebHook" id="apidoc.element.telegraf.Telegram.prototype.setWebHook.setWebHook">
+        function <span class="apidocSignatureSpan">telegraf.Telegram.prototype.</span>setWebHook
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deprecated() {
+  warned = exports.printDeprecationMessage(msg, warned, deprecated);
+  if (new.target) {
+    return Reflect.construct(fn, arguments, new.target);
+  }
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.telegraf.TelegramError" id="apidoc.module.telegraf.TelegramError">module telegraf.TelegramError</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.TelegramError.TelegramError" id="apidoc.element.telegraf.TelegramError.TelegramError">
+        function <span class="apidocSignatureSpan">telegraf.</span>TelegramError
+        <span class="apidocSignatureSpan">(payload = {})</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class TelegramError extends Error {
+  constructor (payload = {}) {
+    super(`${payload.error_code}: ${payload.description}`)
+    this.code = payload.error_code
+    this.description = payload.description
+    this.retryAfter = payload.retry_after
+    this.migrateToChatId = payload.migrate_to_chat_id
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.telegraf.memorySession" id="apidoc.module.telegraf.memorySession">module telegraf.memorySession</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.memorySession.memorySession" id="apidoc.element.telegraf.memorySession.memorySession">
+        function <span class="apidocSignatureSpan">telegraf.</span>memorySession
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">memorySession = function (opts) {
+  opts = Object.assign({
+    sessionName: 'session',
+    getSessionKey: (ctx) =&gt; ctx.from &amp;&amp; ctx.chat &amp;&amp; `${ctx.from.id}:${ctx.chat.id}`
+  }, opts)
+
+  const store = new Map()
+  return (ctx, next) =&gt; {
+    const key = opts.getSessionKey(ctx)
+    if (!key) {
+      return next()
+    }
+    let session = store.get(key) || {}
+    Object.defineProperty(ctx, opts.sessionName, {
+      get: function () { return session },
+      set: function (newValue) { session = Object.assign({}, newValue) }
+    })
+    try {
+      return next()
+    } finally {
+      store.set(key, session)
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.telegraf.telegraf" id="apidoc.module.telegraf.telegraf">module telegraf.telegraf</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.telegraf.telegraf" id="apidoc.element.telegraf.telegraf.telegraf">
+        function <span class="apidocSignatureSpan">telegraf.</span>telegraf
+        <span class="apidocSignatureSpan">(token, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Telegraf extends Composer {
+  constructor (token, options) {
+    super()
+    this.options = Object.assign({
+      retryAfter: 1,
+      handlerTimeout: 0
+    }, options)
+    this.token = token
+    this.handleError = (err) =&gt; {
+      console.error()
+      console.error((err.stack || err.toString()).replace(/^/gm, '  '))
+      console.error()
+      throw err
+    }
+    this.context = {}
+    this.state = {
+      offset: 0,
+      started: false
+    }
+  }
+
+  get token () {
+    return this.options.token
+  }
+
+  set token (token) {
+    this.options.token = token
+    this.telegram = new Telegram(this.options.token, this.options.telegram)
+  }<span class="apidocCodeCommentSpan">/* eslint brace-style: 0 */
+</span>
+  catch (handler) {
+    this.handleError = handler
+    return this
+  }
+
+  webhookCallback (path = '/') {
+    return generateCallback(path, (update, res) =&gt; this.handleUpdate(update, res), debug)
+  }
+
+  startPolling (timeout = 30, limit = 100, allowedUpdates) {
+    this.state.timeout = timeout
+    this.state.limit = limit
+    this.state.allowedUpdates = allowedUpdates
+      ? Array.isArray(allowedUpdates) ? allowedUpdates : [`${allowedUpdates}`]
+      : null
+    if (!this.state.started) {
+      this.state.started = true
+      this.fetchUpdates()
+    }
+    return this
+  }
+
+  startWebhook (path, tlsOptions, port, host, cb) {
+    const webhookCb = this.webhookCallback(path)
+    const callback = cb &amp;&amp; typeof cb === 'function'
+      ? (req, res) =&gt; webhookCb(req, res, () =&gt; cb(req, res))
+      : webhookCb
+    this.webhookServer = tlsOptions
+      ? require('https').createServer(tlsOptions, callback)
+      : require('http').createServer(callback)
+    this.webhookServer.listen(port, host, () =&gt; {
+      debug('Webhook listening on port: %s', port)
+    })
+    return this
+  }
+
+  stop () {
+    this.state.started = false
+    if (this.webhookServer) {
+      this.webhookServer.close()
+    }
+    return this
+  }
+
+  handleUpdates (updates) {
+    if (!Array.isArray(updates)) {
+      return Promise.reject(new Error('Updates must be an array'))
+    }
+    const processAll = Promise.all(updates.map((update) =&gt; this.handleUpdate(update)))
+    if (this.options.handlerTimeout === 0) {
+      return processAll
+    }
+    return Promise.race([
+      processAll,
+      new Promise((resolve) =&gt; setTimeout(resolve, this.options.handlerTimeout))
+    ])
+  }
+
+  handleUpdate (update, webhookResponse) {
+    debug('âš¡ update', update.update_id)
+    const telegram = webhookResponse
+      ? new Telegram(this.token, this.options.telegram, webhookResponse)
+      : this.telegram
+    const ctx = new Context(update, telegram, this.options)
+    Object.assign(ctx, this.context)
+    return this.middleware()(ctx).catch(this.handleError)
+  }
+
+  fetchUpdates () {
+    const { timeout, limit, offset, started, allowedUpdates } = this.state
+    if (!started) {
+      return
+    }
+    this.telegram.getUpdates(timeout, limit, offset, allowedUpdates)
+      .catch((err) =&gt; {
+        const wait = err.retryAfter || this.options.retryAfter
+        console.error(`Failed to get updates. Waiting: ${wait}s`, err)
+        return new Promise((resolve) =&gt; setTimeout(resolve, wait * 1000, []))
+      })
+      .then((updates) =&gt; this.handleUpdates(updates).then(() =&gt; updates))
+      .catch((err) =&gt; {
+        console.error('Failed to process updates.', err)
+        this.state.offset = 0
+        this.state.started = false
+        return []
+      })
+      .then((updates) =&gt; {
+        if (updates.length &gt; 0) {
+          this.state.offset = updates[updates.length - 1].update_id + 1
+        }
+        this.fetchUpdates()
+      })
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.telegraf.Composer" id="apidoc.element.telegraf.telegraf.Composer">
+        function <span class="apidocSignatureSpan">telegraf.telegraf.</span>Composer
+        <span class="apidocSignatureSpan">(...handlers)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Composer {
+  constructor (...handlers) {
+    this.handler = Composer.compose(handlers)
+  }
+
+  use (...fns) {
+    this.handler = Composer.compose([this.handler, ...fns])
+    return this
+  }
+
+  on (updateTypes, ...fns) {
+    return this.use(Composer.mount(updateTypes, Composer.compose(fns)))
+  }
+
+  hears (triggers, ...fns) {
+    return this.use(Composer.hears(triggers, Composer.compose(fns)))
+  }
+
+  command (commands, ...fns) {
+    return this.use(Composer.command(commands, Composer.compose(fns)))
+  }
+
+  action (triggers, ...fns) {
+    return this.use(Composer.action(triggers, Composer.compose(fns)))
+  }
+
+  gameQuery (...fns) {
+    return this.use(Composer.gameQuery(Composer.compose(fns)))
+  }
+
+  middleware () {
+    return this.handler
+  }
+
+  static reply (...args) {
+    return (ctx) =&gt; ctx.reply(...args)
+  }
+
+  static fork (middleware) {
+    return (ctx, next) =&gt; {
+      setImmediate(unwrap(middleware), ctx)
+      return next()
+    }
+  }
+
+  static passThru () {
+    return (ctx, next) =&gt; next()
+  }
+
+  static lazy (fn) {
+    if (typeof fn !== 'function') {
+      throw new Error('Argument must be a function')
+    }
+    return (ctx, next) =&gt; Promise.resolve(fn(ctx))
+      .then((middleware) =&gt; {
+        const handler = unwrap(middleware)
+        return handler(ctx, next)
+      })
+  }
+
+  static log (logFn = console.log) {
+    return Composer.fork((ctx) =&gt; logFn(JSON.stringify(ctx.update, null, 2)))
+  }
+
+  static branch (test, trueMiddleware, falseMiddleware) {
+    if (typeof test !== 'function') {
+      return test ? trueMiddleware : falseMiddleware
+    }
+    return Composer.lazy((ctx) =&gt; Promise.resolve(test(ctx)).then((value) =&gt; value ? trueMiddleware : falseMiddleware))
+  }
+
+  static optional (test, ...fns) {
+    return Composer.branch(test, Composer.compose(fns), Composer.passThru())
+  }
+
+  static dispatch (test, handlers) {
+    if (typeof test !== 'function') {
+      return handlers[test] || Composer.passThru()
+    }
+    return Composer.lazy((ctx) =&gt; Promise.resolve(test(ctx)).then((value) =&gt; handlers[value]))
+  }
+
+  static mount (updateType, middleware) {
+    let test = Array.isArray(updateType)
+      ? (ctx) =&gt; updateType.includes(ctx.updateType) || updateType.includes(ctx.updateSubType)
+      : (ctx) =&gt; updateType === ctx.updateType || updateType === ctx.updateSubType
+    return Composer.optional(test, middleware)
+  }
+
+  static hears (triggers, middleware) {
+    const tests = makeTests(triggers)
+    return Composer.mount('text', Composer.match(tests, middleware))
+  }
+
+  static action (triggers, middleware) {
+    const tests = makeTests(triggers)
+    return Composer.mount('callback_query', Composer.match(tests, middleware))
+  }
+
+  static match (tests, middleware) {
+    return Composer.lazy((ctx) =&gt; {
+      const text = (ctx.message &amp;&amp; (ctx.message.caption || ctx.message.text)) || (ctx.callbackQuery &amp;&amp; ctx.callbackQuery.data)
+      for (let test of tests) {
+        const result = test(text, ctx)
+        if (!result) {
+          continue
+        }
+        ctx.match = result
+        return middleware
+      }
+      return Composer.passThru()
+    })
+  }
+
+  static acl (userId, middleware) {
+    let whitelistFn = userId
+    if (typeof whitelistFn !== 'function') {
+      const allowed = Array.isArray(userId) ? userId : [userId]
+      whitelistFn = (ctx) =&gt; allowed.includes(ctx.from.id) || (ctx.from.username &amp;&amp; allowed.includes(ctx.from.username))
+    }
+    return Composer.optional(whitelistFn, middleware)
+  }
+
+  static gameQuery (middleware) {
+    return Composer.mount('callback_query', Composer.optional((ctx) =&gt; ctx.callbackQuery.game_short_name, middleware))
+  }
+
+  static command (command, middleware) {
+    let commands = Array.isArray(command) ? command : [command]
+    commands = commands.map((cmd) =&gt; cmd.startsWith('/') ? cmd : `/${cmd}`)
+    return Composer.mount('text', Composer.lazy((ctx) =&gt; {
+      const text = ctx.message.text
+      const groupCommands = ctx.me &amp;&amp; (ctx.chat.type === 'group' || ctx.chat.type === 'supergroup')
+        ? commands.map((command) =&gt; `${command}@${ctx.me}`)
+        : []
+      const hasM ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.telegraf.Extra" id="apidoc.element.telegraf.telegraf.Extra">
+        function <span class="apidocSignatureSpan">telegraf.telegraf.</span>Extra
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Extra {
+  constructor (opts) {
+    this.load(opts)
+  }
+
+  load (opts) {
+    if (opts) {
+      Object.assign(this, opts)
+    }
+    return this
+  }
+
+  inReplyTo (messageId) {
+    this.reply_to_message_id = messageId
+    return this
+  }
+
+  notifications (value = true) {
+    this.disable_notification = !value
+    return this
+  }
+
+  webPreview (value = true) {
+    this.disable_web_page_preview = !value
+    return this
+  }
+
+  markup (markup) {
+    if (typeof markup === 'function') {
+      markup = markup(new ReplyMarkup())
+    }
+    this.reply_markup = Object.assign({}, markup)
+    return this
+  }
+
+  HTML (value = true) {
+    this.parse_mode = value ? 'HTML' : undefined
+    return this
+  }
+
+  markdown (value = true) {
+    this.parse_mode = value ? 'Markdown' : undefined
+    return this
+  }
+
+  static inReplyTo (messageId) {
+    return new Extra().inReplyTo(messageId)
+  }
+
+  static notifications (value) {
+    return new Extra().notifications(value)
+  }
+
+  static webPreview (value) {
+    return new Extra().webPreview(value)
+  }
+
+  static load (opts) {
+    return new Extra(opts)
+  }
+
+  static markup (markup) {
+    return new Extra().markup(markup)
+  }
+
+  static HTML (value) {
+    return new Extra().HTML(value)
+  }
+
+  static markdown (value) {
+    return new Extra().markdown(value)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.telegraf.Markup" id="apidoc.element.telegraf.telegraf.Markup">
+        function <span class="apidocSignatureSpan">telegraf.telegraf.</span>Markup
+        <span class="apidocSignatureSpan">(value = true)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Markup {
+  forceReply (value = true) {
+    this.force_reply = value
+    return this
+  }
+
+  removeKeyboard (value = true) {
+    this.remove_keyboard = value
+    return this
+  }
+
+  selective (value = true) {
+    this.selective = value
+    return this
+  }
+
+  extra () {
+    return { reply_markup: Object.assign({}, this) }
+  }
+
+  keyboard (buttons, options) {
+    const keyboard = buildKeyboard(buttons, Object.assign({columns: 1}, options))
+    if (keyboard &amp;&amp; keyboard.length &gt; 0) {
+      this.keyboard = keyboard
+    }
+    return this
+  }
+
+  resize (value = true) {
+    this.resize_keyboard = value
+    return this
+  }
+
+  oneTime (value = true) {
+    this.one_time_keyboard = value
+    return this
+  }
+
+  inlineKeyboard (buttons, options) {
+    const keyboard = buildKeyboard(buttons, Object.assign({columns: buttons.length}, options))
+    if (keyboard &amp;&amp; keyboard.length &gt; 0) {
+      this.inline_keyboard = keyboard
+    }
+    return this
+  }
+
+  button (text, hide) {
+    return Markup.button(text, hide)
+  }
+
+  contactRequestButton (text, hide) {
+    return Markup.contactRequestButton(text, hide)
+  }
+
+  locationRequestButton (text, hide) {
+    return Markup.locationRequestButton(text, hide)
+  }
+
+  urlButton (text, url, hide) {
+    return Markup.urlButton(text, url, hide)
+  }
+
+  callbackButton (text, data, hide) {
+    return Markup.callbackButton(text, data, hide)
+  }
+
+  gameButton (text, hide) {
+    return Markup.gameButton(text, hide)
+  }
+
+  static removeKeyboard (value) {
+    return new Markup().removeKeyboard(value)
+  }
+
+  static forceReply (value) {
+    return new Markup().forceReply(value)
+  }
+
+  static keyboard (buttons, options) {
+    return new Markup().keyboard(buttons, options)
+  }
+
+  static inlineKeyboard (buttons, options) {
+    return new Markup().inlineKeyboard(buttons, options)
+  }
+
+  static resize (value = true) {
+    return new Markup().resize(value)
+  }
+
+  static oneTime (value = true) {
+    return new Markup().oneTime(value)
+  }
+
+  static button (text, hide) {
+    return { text: text, hide: hide }
+  }
+
+  static contactRequestButton (text, hide = false) {
+    return { text: text, request_contact: true, hide: hide }
+  }
+
+  static locationRequestButton (text, hide = false) {
+    return { text: text, request_location: true, hide: hide }
+  }
+
+  static urlButton (text, url, hide = false) {
+    return { text: text, url: url, hide: hide }
+  }
+
+  static callbackButton (text, data, hide = false) {
+    return { text: text, callback_data: data, hide: hide }
+  }
+
+  static switchToChatButton (text, value, hide = false) {
+    return { text: text, switch_inline_query: value, hide: hide }
+  }
+
+  static switchToCurrentChatButton (text, value, hide = false) {
+    return { text: text, switch_inline_query_current_chat: value, hide: hide }
+  }
+
+  static gameButton (text, hide = false) {
+    return { text: text, callback_game: {}, hide: hide }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.telegraf.Router" id="apidoc.element.telegraf.telegraf.Router">
+        function <span class="apidocSignatureSpan">telegraf.telegraf.</span>Router
+        <span class="apidocSignatureSpan">(routeFn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Router {
+  constructor (routeFn) {
+    if (!routeFn) {
+      throw new Error('Missing routing function')
+    }
+    this.routeFn = routeFn
+    this.handlers = new Map()
+    this.otherwiseHandler = passThru()
+  }
+
+  on (route, ...fns) {
+    if (fns.length === 0) {
+      throw new TypeError('At least one handler must be provided')
+    }
+    this.handlers.set(route, compose(fns))
+    return this
+  }
+
+  otherwise (...fns) {
+    if (fns.length === 0) {
+      throw new TypeError('At least one otherwise handler must be provided')
+    }
+    this.otherwiseHandler = compose(fns)
+    return this
+  }
+
+  middleware () {
+    return lazy((ctx) =&gt; {
+      return this.routeFn(ctx).then((result) =&gt; {
+        if (!result || !result.route || !this.handlers.has(result.route)) {
+          return this.otherwiseHandler
+        }
+        Object.assign(ctx, result.context)
+        Object.assign(ctx.state, result.state)
+        return this.handlers.get(result.route)
+      })
+    })
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.telegraf.Telegram" id="apidoc.element.telegraf.telegraf.Telegram">
+        function <span class="apidocSignatureSpan">telegraf.telegraf.</span>Telegram
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Telegram extends ApiClient {
+  getMe () {
+    return this.callApi('getMe')
+  }
+
+  getFile (fileId) {
+    return this.callApi('getFile', {file_id: fileId})
+  }
+
+  getFileLink (fileId) {
+    return Promise.resolve(fileId)
+      .then((fileId) =&gt; {
+        if (fileId &amp;&amp; fileId.file_path) {
+          return fileId
+        }
+        const id = fileId &amp;&amp; fileId.file_id ? fileId.file_id : fileId
+        return this.getFile(id)
+      })
+      .then((file) =&gt; `${this.options.apiRoot}/file/bot${this.token}/${file.file_path}`)
+  }
+
+  getUpdates (timeout, limit, offset, allowedUpdates) {
+    let url = `getUpdates?offset=${offset}&amp;limit=${limit}&amp;timeout=${timeout}`
+    return this.callApi(url, {
+      allowed_updates: allowedUpdates
+    })
+  }
+
+  getWebhookInfo () {
+    return this.callApi(`getWebhookInfo`)
+  }
+
+  getGameHighScores (userId, inlineMessageId, chatId, messageId) {
+    return this.callApi(`getGameHighScores`, {
+      user_id: userId,
+      inline_message_id: inlineMessageId,
+      chat_id: chatId,
+      message_id: messageId
+    })
+  }
+
+  setGameScore (userId, score, inlineMessageId, chatId, messageId, editMessage = true, force) {
+    return this.callApi(`setGameScore`, {
+      user_id: userId,
+      score: score,
+      inline_message_id: inlineMessageId,
+      chat_id: chatId,
+      message_id: messageId,
+      disable_edit_message: !editMessage,
+      force: force
+    })
+  }
+
+  setWebhook (url, cert, maxConnections, allowedUpdates) {
+    return this.callApi('setWebhook', {
+      url: url,
+      certificate: cert,
+      max_connections: maxConnections,
+      allowed_updates: allowedUpdates
+    })
+  }
+
+  deleteWebhook () {
+    return this.callApi('deleteWebhook')
+  }
+
+  sendMessage (chatId, text, extra) {
+    return this.callApi('sendMessage', Object.assign({ chat_id: chatId, text: text }, extra))
+  }
+
+  forwardMessage (chatId, fromChatId, messageId, extra) {
+    return this.callApi('forwardMessage', Object.assign({
+      chat_id: chatId,
+      from_chat_id: fromChatId,
+      message_id: messageId
+    }, extra))
+  }
+
+  sendChatAction (chatId, action) {
+    return this.callApi('sendChatAction', { chat_id: chatId, action: action })
+  }
+
+  getUserProfilePhotos (userId, offset, limit) {
+    return this.callApi('getUserProfilePhotos', { user_id: userId, offset: offset, limit: limit })
+  }
+
+  sendLocation (chatId, latitude, longitude, extra) {
+    return this.callApi('sendLocation', Object.assign({ chat_id: chatId, latitude: latitude, longitude: longitude }, extra))
+  }
+
+  sendVenue (chatId, latitude, longitude, title, address, extra) {
+    return this.callApi('sendVenue', Object.assign({
+      chat_id: chatId,
+      latitude: latitude,
+      longitude: longitude,
+      title: title,
+      address: address
+    }, extra))
+  }
+
+  sendContact (chatId, phoneNumber, firstName, extra) {
+    return this.callApi('sendContact', Object.assign({ chat_id: chatId, phone_number: phoneNumber, first_name: firstName }, extra
+))
+  }
+
+  sendPhoto (chatId, photo, extra) {
+    return this.callApi('sendPhoto', Object.assign({ chat_id: chatId, photo: photo }, extra))
+  }
+
+  sendDocument (chatId, doc, extra) {
+    return this.callApi('sendDocument', Object.assign({ chat_id: chatId, document: doc }, extra))
+  }
+
+  sendAudio (chatId, audio, extra) {
+    return this.callApi('sendAudio', Object.assign({ chat_id: chatId, audio: audio }, extra))
+  }
+
+  sendSticker (chatId, sticker, extra) {
+    return this.callApi('sendSticker', Object.assign({ chat_id: chatId, sticker: sticker }, extra))
+  }
+
+  sendVideo (chatId, video, extra) {
+    return this.callApi('sendVideo', Object.assign({ chat_id: chatId, video: video }, extra))
+  }
+
+  sendVoice (chatId, voice, extra) {
+    return this.callApi('sendVoice', Object.assign({ chat_id: chatId, voice: voice }, extra))
+  }
+
+  sendGame (chatId, gameName, extra) {
+    return this.callApi('sendGame', Object.assign({ chat_id: chatId, game_short_name: gameName }, extra))
+  }
+
+  getChat (chatId) {
+    return this.callApi('getChat', {chat_id: chatId})
+  }
+
+  getChatAdministrators (chatId) {
+    return this.callApi('getCh ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.telegraf.TelegramError" id="apidoc.element.telegraf.telegraf.TelegramError">
+        function <span class="apidocSignatureSpan">telegraf.telegraf.</span>TelegramError
+        <span class="apidocSignatureSpan">(payload = {})</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class TelegramError extends Error {
+  constructor (payload = {}) {
+    super(`${payload.error_code}: ${payload.description}`)
+    this.code = payload.error_code
+    this.description = payload.description
+    this.retryAfter = payload.retry_after
+    this.migrateToChatId = payload.migrate_to_chat_id
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.telegraf.memorySession" id="apidoc.element.telegraf.telegraf.memorySession">
+        function <span class="apidocSignatureSpan">telegraf.telegraf.</span>memorySession
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">memorySession = function (opts) {
+  opts = Object.assign({
+    sessionName: 'session',
+    getSessionKey: (ctx) =&gt; ctx.from &amp;&amp; ctx.chat &amp;&amp; `${ctx.from.id}:${ctx.chat.id}`
+  }, opts)
+
+  const store = new Map()
+  return (ctx, next) =&gt; {
+    const key = opts.getSessionKey(ctx)
+    if (!key) {
+      return next()
+    }
+    let session = store.get(key) || {}
+    Object.defineProperty(ctx, opts.sessionName, {
+      get: function () { return session },
+      set: function (newValue) { session = Object.assign({}, newValue) }
+    })
+    try {
+      return next()
+    } finally {
+      store.set(key, session)
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.telegraf.telegraf.prototype" id="apidoc.module.telegraf.telegraf.prototype">module telegraf.telegraf.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.telegraf.prototype.startWebHook" id="apidoc.element.telegraf.telegraf.prototype.startWebHook">
+        function <span class="apidocSignatureSpan">telegraf.telegraf.prototype.</span>startWebHook
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deprecated() {
+  warned = exports.printDeprecationMessage(msg, warned, deprecated);
+  if (new.target) {
+    return Reflect.construct(fn, arguments, new.target);
+  }
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.telegraf.prototype.webHookCallback" id="apidoc.element.telegraf.telegraf.prototype.webHookCallback">
+        function <span class="apidocSignatureSpan">telegraf.telegraf.prototype.</span>webHookCallback
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deprecated() {
+  warned = exports.printDeprecationMessage(msg, warned, deprecated);
+  if (new.target) {
+    return Reflect.construct(fn, arguments, new.target);
+  }
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.telegraf.telegraf.prototype.startWebHook" id="apidoc.module.telegraf.telegraf.prototype.startWebHook">module telegraf.telegraf.prototype.startWebHook</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.telegraf.prototype.startWebHook.startWebHook" id="apidoc.element.telegraf.telegraf.prototype.startWebHook.startWebHook">
+        function <span class="apidocSignatureSpan">telegraf.telegraf.prototype.</span>startWebHook
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deprecated() {
+  warned = exports.printDeprecationMessage(msg, warned, deprecated);
+  if (new.target) {
+    return Reflect.construct(fn, arguments, new.target);
+  }
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.telegraf.telegraf.prototype.webHookCallback" id="apidoc.module.telegraf.telegraf.prototype.webHookCallback">module telegraf.telegraf.prototype.webHookCallback</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.telegraf.prototype.webHookCallback.webHookCallback" id="apidoc.element.telegraf.telegraf.prototype.webHookCallback.webHookCallback">
+        function <span class="apidocSignatureSpan">telegraf.telegraf.prototype.</span>webHookCallback
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deprecated() {
+  warned = exports.printDeprecationMessage(msg, warned, deprecated);
+  if (new.target) {
+    return Reflect.construct(fn, arguments, new.target);
+  }
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.telegraf.toString" id="apidoc.module.telegraf.toString">module telegraf.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.telegraf.toString.toString" id="apidoc.element.telegraf.toString.toString">
+        function <span class="apidocSignatureSpan">telegraf.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
